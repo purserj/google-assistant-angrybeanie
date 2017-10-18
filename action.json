@@ -1,0 +1,41 @@
+{
+	"actions": [
+      {
+        "description": "Welcome to Angry Beanie",
+        "name": "MAIN",
+        "fulfillment": {
+          "conversationName": "angryBeanieWelcome"
+        },
+        "intent": {
+          "name": "actions.intent.MAIN",
+          "trigger": {
+            "queryPatterns": [
+              "talk to Angry Beanie"
+            ]
+          }
+        }
+      },
+      {
+	"name": "EPISODES",
+	"fulfillment": {
+	  "conversationName": "angryBeanieEpisodes"
+	},
+	"intent": {
+	  "name": "actions.intent.EPISODES",
+	  "trigger": {
+	    "queryPatterns": [
+		    {"queryPattern": "get the next episode"},
+		    {"queryPattern": "get the last episode"}
+	    ]
+	  }	
+        }
+      }
+    ],
+    "conversations": {
+      "angryBeanieWelcome": {
+        "name": "angryBeanieWelcome",
+        "url": "<INSERT YOUR FULLFILLMENT URL HERE>"
+      }
+    }
+
+}
