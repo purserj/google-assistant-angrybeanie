@@ -50,8 +50,7 @@ function playLatestPodcast(res, params) {
 	parser.parseURL(feedURL, function(err, parsed) {
 		var entry = parsed.feed.entries[0];
 		console.log(entry);
-		var mp3 = entry.enclosure.url.split("/").pop();
-		mp3 = "https://audio.angrybeanie.com/audio/"+mp3;
+		var mp3 = entry.enclosure.url;
 		console.log(mp3);
 		response+='<speak>Now playing '+entry.title+'. <audio src="'+mp3+'">Oops can\'t get the mp3</audio></speak>';
 		var responseDisplay="Now playing"+entry.title;
@@ -63,8 +62,8 @@ function playLatestPodcast(res, params) {
 
 function getPodcastURL(PodcastName) {
 
-	var wistemmURL = 'http://feeds.feedburner.com/WomenInStemm';
-	var forscienceURL = 'http://feeds.feedburner.com/angrybeanie/ForScienceMP3';
+	var wistemmURL = 'https://dev.angrybeanie.com/feed/wistemm';
+	var forscienceURL = 'https://dev.angrybeanie.com/feed/forscience';
 	//var forscienceURL = 'https://www.angrybeanie.com/shows/for-science/mp3_feed_feedburner'
 
 	if(PodcastName == 'Women In STEMM' || PodcastName == 'Women In STEM') {
