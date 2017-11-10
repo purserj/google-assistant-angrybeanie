@@ -64,12 +64,14 @@ function getPodcastURL(PodcastName) {
 
 	var wistemmURL = 'https://dev.angrybeanie.com/feed/wistemm';
 	var forscienceURL = 'https://dev.angrybeanie.com/feed/forscience';
-	//var forscienceURL = 'https://www.angrybeanie.com/shows/for-science/mp3_feed_feedburner'
+	var petwURL = 'https://dev.angrybeanie.com/feed/petw'
 
 	if(PodcastName == 'Women In STEMM' || PodcastName == 'Women In STEM') {
 		var feedURL = wistemmURL;
 	} else if (PodcastName == 'For Science') {
 		var feedURL = forscienceURL;
+	} else if (PodcastName == 'Purser Explores The World') {
+		var feedURL = petwURL;
 	}
 
 	return feedURL;
